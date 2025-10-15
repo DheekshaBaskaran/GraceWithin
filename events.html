@@ -4,84 +4,114 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Upcoming Events | Grace Within</title>
+   Updated to professional Inter font 
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #eaf6fb;
-      color: #2e3b4e;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
+    body {
+      font-family: 'Inter', sans-serif;
+      /* Updated to professional blue and white color scheme */
+      background: linear-gradient(135deg, #1e5a8e 0%, #2874b5 100%);
+      color: #2e3b4e;
+      min-height: 100vh;
+    }
+
+    /* Professional navigation matching home page */
     nav {
-      background-color: #b0d8f1;
-      padding: 15px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 20px;
       text-align: center;
+      border-bottom: 2px solid #1e5a8e;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
 
     nav a {
-      color: #064663;
-      margin: 0 15px;
+      color: #1e5a8e;
+      margin: 0 25px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      color: #2874b5;
+      transform: translateY(-1px);
     }
 
     .container {
       max-width: 1000px;
-      margin: 50px auto;
+      margin: 60px auto;
       padding: 20px;
     }
 
     h1 {
       text-align: center;
-      color: #045b8a;
-      margin-bottom: 40px;
+      color: #ffffff;
+      margin-bottom: 50px;
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     }
 
+    /* Professional event cards with blue and white theme */
     .event {
-      background-color: #ffffff;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-      padding: 25px;
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      padding: 35px;
       margin-bottom: 30px;
-      transition: transform 0.2s;
+      transition: all 0.3s ease;
+      border-left: 6px solid #1e5a8e;
     }
 
     .event:hover {
-      transform: scale(1.02);
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
     }
 
     .event-title {
-      font-size: 1.4em;
-      color: #045b8a;
-      margin-bottom: 10px;
+      font-size: 1.5em;
+      color: #1e5a8e;
+      margin-bottom: 15px;
+      font-weight: 600;
     }
 
     .event-date {
-      font-weight: bold;
-      margin-bottom: 10px;
-      color: #064663;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #2874b5;
+      font-size: 1.05rem;
     }
 
     .event-description {
       font-size: 1em;
-      line-height: 1.6;
+      line-height: 1.7;
+      color: #2e3b4e;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      
+      nav a {
+        margin: 0 15px;
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
-<script src="/inject-footer.js"></script>
-
 <body>
-    <a href="index.html">
-        <img src="logo.png" alt="Grace Within Logo" style="height: 50px; vertical-align: middle; margin-right: 15px;">
-      </a>
+  
   <nav>
     <a href="index.html">Home</a>
-    <a href="donate.html">Donate</a>
     <a href="events.html">Events</a>
     <a href="blogs.html">Blogs</a>  
     <a href="resources.html">Resources</a>
@@ -92,16 +122,15 @@
     <h1>Events</h1>
     <div class="event">
       <div class="event-title">Mental Health and More Webinar</div>
-      <div class="event-date">August 30, 2025 7:00 PM PST</div>
-      <div class="event-description">Join to learn more about mental health and eating disorders. Learn about resources and prevention. </div>
+      <div class="event-date">May 30, 2025 7:00 PM PST</div>
+      <div class="event-description">Join to learn more about mental health and eating disorders. Learn about resources and prevention.</div>
     </div>
     <div class="event">
       <div class="event-title">Grace Within x Sahaas Mental Health Virtual Session</div>
-      <div class="event-date">September 4, 2025; 6PM - 7PM PST</div>
+      <div class="event-date">August 4, 2025; 6PM - 7PM PST</div>
       <div class="event-description">Learn about mental health and eating disorders. Spread awareness and stop the stigma. Get involved and learn through engaging activities. Open to all ages!</div>
     </div>
 
-  
     <div class="event">
       <div class="event-title">Teen Talk App x Grace Within Mental Health & Stress managment session</div>
       <div class="event-date">August 9, 2025</div>
