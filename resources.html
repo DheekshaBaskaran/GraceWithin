@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resources | Grace Within</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     * {
       margin: 0;
@@ -15,106 +17,97 @@
     }
 
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-family: 'Inter', sans-serif;
       background-color: #f8fafc;
       color: #1e293b;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
-    /* Consistent navigation styling */
+    /* NAVIGATION */
     nav {
-      background-color: #ffffff;
-      padding: 0;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      background: #fff;
+      border-bottom: 1px solid #e2e8f0;
       position: sticky;
       top: 0;
-      z-index: 1000;
+      z-index: 100;
     }
 
     .nav-container {
       max-width: 1200px;
       margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
       padding: 1rem 2rem;
-    }
-
-    .logo-link {
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      text-decoration: none;
     }
 
     .logo {
-      height: 45px;
-      width: auto;
+      height: 48px;
     }
 
     .nav-links {
       display: flex;
       gap: 2rem;
-      align-items: center;
     }
 
-    nav a {
-      color: #475569;
+    .nav-links a {
       text-decoration: none;
+      color: #475569;
       font-weight: 500;
-      font-size: 0.95rem;
-      transition: color 0.2s;
+      font-size: 0.97rem;
+      transition: color .2s;
     }
 
-    nav a:hover {
+    .nav-links a:hover {
       color: #2563eb;
     }
 
-    /* Page header section */
+    /* HEADER */
     .page-header {
-      background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
-      padding: 4rem 2rem;
+      background: linear-gradient(135deg, #dbeafe, #eff6ff 55%, #ffffff);
+      padding: 5rem 2rem;
       text-align: center;
     }
 
     .page-header h1 {
-      font-size: 3rem;
+      font-size: 3.25rem;
       font-weight: 700;
       color: #0f172a;
-      margin-bottom: 0.75rem;
+      margin-bottom: 1rem;
       letter-spacing: -0.02em;
     }
 
     .page-header p {
-      font-size: 1.15rem;
+      font-size: 1.18rem;
       color: #475569;
       max-width: 700px;
-      margin: 0 auto;
+      margin: 0.5rem auto;
     }
 
-    /* Resources grid with visual cards */
+    /* RESOURCES GRID */
     .resources-container {
       max-width: 1000px;
-      margin: 4rem auto;
+      margin: 4rem auto 6rem;
       padding: 0 2rem;
     }
 
     .resources-grid {
       display: grid;
-      gap: 1.5rem;
+      gap: 1.75rem;
     }
 
     .resource-card {
-      background-color: #ffffff;
-      border-radius: 12px;
-      padding: 2rem;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s;
-      border-left: 4px solid #2563eb;
+      background: #fff;
+      border-radius: 14px;
+      padding: 2rem 2.25rem;
+      border-left: 5px solid #2563eb;
+      box-shadow: 0 3px 10px rgba(0,0,0,.05);
+      transition: all .28s ease;
     }
 
     .resource-card:hover {
-      transform: translateX(4px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0,0,0,.12);
     }
 
     .resource-card h3 {
@@ -126,69 +119,65 @@
     .resource-card h3 a {
       color: #2563eb;
       text-decoration: none;
-      transition: color 0.2s;
+      transition: color .2s;
     }
 
     .resource-card h3 a:hover {
-      color: #1d4ed8;
+      color: #1e40af;
+    }
+
+    .resource-icon {
+      font-size: 0.9rem;
+      margin-left: 0.4rem;
+      opacity: 0.65;
     }
 
     .resource-card p {
       color: #475569;
-      line-height: 1.7;
       font-size: 1rem;
+      line-height: 1.7;
     }
 
-    .resource-icon {
-      display: inline-block;
-      margin-left: 0.5rem;
-      font-size: 0.9rem;
-      opacity: 0.6;
-    }
-
+    /* FOOTER */
     footer {
-      background-color: #f1f5f9;
-      text-align: center;
+      background: #f1f5f9;
       padding: 2rem;
-      margin-top: 4rem;
+      text-align: center;
       color: #64748b;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
+      margin-top: 5rem;
     }
 
-    /* Responsive design */
+    /* RESPONSIVE */
     @media (max-width: 768px) {
       .page-header h1 {
-        font-size: 2.25rem;
+        font-size: 2.4rem;
       }
 
       .page-header p {
         font-size: 1rem;
       }
 
-      .nav-links {
-        gap: 1rem;
-      }
-
-      nav a {
-        font-size: 0.85rem;
-      }
+      .nav-links { gap: 1rem; }
 
       .resource-card {
-        padding: 1.5rem;
+        padding: 1.6rem;
       }
     }
   </style>
 </head>
+
 <body>
+
   <nav>
     <div class="nav-container">
-      <a href="index.html" class="logo-link">
+      <a href="index.html">
         <img src="logo.png" alt="Grace Within Logo" class="logo">
       </a>
       <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="events.html">Events</a>
-        <a href="blogs.html">Blogs</a>  
+        <a href="blogs.html">Blogs</a>
         <a href="resources.html">Resources</a>
         <a href="contact.html">Contact Us</a>
       </div>
@@ -197,11 +186,12 @@
 
   <header class="page-header">
     <h1>Support & Recovery Resources</h1>
-    <p>Comprehensive resources for eating disorder support, recovery, and mental health education</p>
+    <p>Trusted organizations and tools for eating disorder recovery, mental health education, and community support.</p>
   </header>
 
   <div class="resources-container">
     <div class="resources-grid">
+
       <div class="resource-card">
         <h3>
           <a href="https://www.nationaleatingdisorders.org" target="_blank">
@@ -209,7 +199,7 @@
             <span class="resource-icon">↗</span>
           </a>
         </h3>
-        <p>Comprehensive support, screening tools, and helplines for those affected by eating disorders.</p>
+        <p>Screening tools, helplines, and comprehensive support for individuals and families.</p>
       </div>
 
       <div class="resource-card">
@@ -219,7 +209,7 @@
             <span class="resource-icon">↗</span>
           </a>
         </h3>
-        <p>Educational resources, recovery stories, and treatment provider listings.</p>
+        <p>Educational articles, treatment guides, and personal recovery stories.</p>
       </div>
 
       <div class="resource-card">
@@ -229,7 +219,7 @@
             <span class="resource-icon">↗</span>
           </a>
         </h3>
-        <p>Equity-focused eating disorder treatment support including financial aid and mentorship programs.</p>
+        <p>Equity-centered treatment access programs including financial aid and peer support.</p>
       </div>
 
       <div class="resource-card">
@@ -239,7 +229,7 @@
             <span class="resource-icon">↗</span>
           </a>
         </h3>
-        <p>Scientific insights and statistics about eating disorders and mental health research.</p>
+        <p>Research-based insights, data, and clinical information on eating disorders.</p>
       </div>
 
       <div class="resource-card">
@@ -249,33 +239,35 @@
             <span class="resource-icon">↗</span>
           </a>
         </h3>
-        <p>Promotes body acceptance, intuitive eating, and self-care through education and activism.</p>
+        <p>Education and advocacy supporting body acceptance, intuitive eating, and holistic wellness.</p>
       </div>
 
       <div class="resource-card">
         <h3>
           <a href="https://anad.org" target="_blank">
-            ANAD (National Association of Anorexia Nervosa and Associated Disorders)
+            ANAD (National Association of Anorexia Nervosa...)
             <span class="resource-icon">↗</span>
           </a>
         </h3>
-        <p>Free peer support services, mentorship programs, and virtual support groups for those affected by eating disorders.</p>
+        <p>Free peer mentorship, virtual support groups, and recovery resources.</p>
       </div>
 
       <div class="resource-card">
         <h3>
           <a href="https://www.feast-ed.org" target="_blank">
-            F.E.A.S.T. (Families Empowered and Supporting Treatment of Eating Disorders)
+            F.E.A.S.T.
             <span class="resource-icon">↗</span>
           </a>
         </h3>
-        <p>Provides support, education, and resources for families and caregivers of individuals with eating disorders.</p>
+        <p>Support, education, and tools for caregivers supporting loved ones with eating disorders.</p>
       </div>
+
     </div>
   </div>
 
   <footer>
-    <p>&copy; 2025 Grace Within. All rights reserved.</p>
+    © 2025 Grace Within. All rights reserved.
   </footer>
+
 </body>
 </html>
