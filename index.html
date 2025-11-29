@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Grace Within</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
   <style>
     * {
       margin: 0;
@@ -12,200 +16,291 @@
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #eaf6fb;
-      color: #2e3b4e;
-      line-height: 1.6;
+      font-family: 'Inter', sans-serif;
+      background-color: #f8fafc;
+      color: #1e293b;
+      line-height: 1.7;
     }
 
+    /* NAVIGATION */
     nav {
-      background-color: #b0d8f1;
-      padding: 15px;
-      text-align: center;
+      background-color: #fff;
+      border-bottom: 1px solid #e2e8f0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
-    nav a {
-      color: #064663;
-      margin: 0 15px;
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      height: 48px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: #475569;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 500;
+      font-size: 0.97rem;
+      transition: color .2s;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    .nav-links a:hover {
+      color: #2563eb;
     }
 
-    header {
-      background: url('') no-repeat center center/cover;
-      color: white;
-      padding: 100px 20px;
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #dbeafe, #eff6ff 55%, #ffffff);
+      padding: 6rem 2rem 7rem;
       text-align: center;
     }
 
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 15px;
+    .hero h1 {
+      font-size: 3.75rem;
+      font-weight: 700;
+      color: #0f172a;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
     }
 
-    header p {
-      font-size: 1.3rem;
-      margin-bottom: 25px;
+    .hero p {
+      font-size: 1.25rem;
+      color: #475569;
+      max-width: 680px;
+      margin: 0.5rem auto 2.5rem;
     }
 
     .btn {
-      display: inline-block;
-      padding: 12px 25px;
-      background-color: #64b5f6;
-      color: #fff;
+      padding: 0.9rem 2rem;
+      background-color: #2563eb;
+      color: white;
+      font-size: 1.05rem;
+      border-radius: 10px;
       text-decoration: none;
-      border-radius: 5px;
-      transition: 0.3s;
-      font-weight: bold;
+      display: inline-block;
+      font-weight: 600;
+      transition: all .25s;
     }
 
     .btn:hover {
-      background-color: #42a5f5;
+      background-color: #1e40af;
+      box-shadow: 0 5px 18px rgba(37, 99, 235, 0.35);
+      transform: translateY(-2px);
     }
 
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
+    /* MISSION SECTION */
+    .mission-section {
+      max-width: 1200px;
+      margin: 4rem auto 5rem;
+      padding: 0 2rem;
     }
 
-    .content-box {
-      background-color: #ffffff;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-      padding: 30px;
-      margin-bottom: 40px;
+    .mission-container {
+      display: flex;
+      gap: 3.5rem;
+      background: #fff;
+      border-radius: 14px;
+      padding: 3.5rem;
+      border-left: 5px solid #2563eb;
+      box-shadow: 0 4px 12px rgba(0,0,0,.06);
+      align-items: center;
     }
 
-    section h2 {
+    .mission-text h2 {
       font-size: 2.25rem;
-      color: #045b8a;
-      margin-bottom: 20px;
+      margin-bottom: 1.25rem;
+      color: #0f172a;
+      font-weight: 700;
     }
 
-    section p {
+    .mission-text p {
+      font-size: 1.08rem;
+      color: #475569;
+      margin-bottom: 1.4rem;
+    }
+
+    .mission-image img {
+      width: 100%;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0,0,0,.1);
+    }
+
+    /* EVENTS */
+    .events-section {
+      max-width: 1200px;
+      margin: 5rem auto;
+      padding: 0 2rem;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .section-header h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: .5rem;
+    }
+
+    .section-header p {
+      color: #64748b;
       font-size: 1.1rem;
-      margin-bottom: 20px;
+    }
+
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .event-card {
+      background-color: #fff;
+      border-radius: 14px;
+      padding: 2.25rem;
+      border: 1px solid #e2e8f0;
+      transition: all .25s;
+      box-shadow: 0 2px 8px rgba(0,0,0,.05);
+    }
+
+    .event-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(0,0,0,.08);
+    }
+
+    .event-card h3 {
+      font-size: 1.3rem;
+      color: #2563eb;
+      margin-bottom: 1rem;
+    }
+
+    .event-card p {
+      font-size: 1rem;
+      color: #475569;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .event-meta {
+      display: flex;
+      gap: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e2e8f0;
+      margin-top: 1.2rem;
     }
 
     footer {
-      background-color: #d6ecf8;
+      margin-top: 5rem;
+      padding: 2rem;
+      background-color: #f1f5f9;
       text-align: center;
-      padding: 25px 20px;
-      font-size: 0.9rem;
-      color: #35546d;
+      font-size: .95rem;
+      color: #64748b;
     }
 
+    @media (max-width: 768px) {
+      .mission-container {
+        flex-direction: column;
+        padding: 2rem;
+      }
+
+      .hero h1 {
+        font-size: 2.7rem;
+      }
+
+      .nav-links { gap: 1rem; }
+    }
   </style>
 </head>
-<script src="/inject-footer.js"></script>
+
 <body>
-  <a href="index.html">
-    <img src="logo.png" alt="Grace Within Logo" style="height: 50px; vertical-align: middle; margin-right: 15px;">
-  </a>
+
   <nav>
-    <a href="index.html">Home</a>
-    <a href="events.html">Events</a>
-    <a href="blogs.html">Blogs</a>  
-    <a href="resources.html">Resources</a>
-    <a href="contact.html">Contact Us</a>
-      
+    <div class="nav-container">
+      <a href="index.html">
+        <img src="logo.png" class="logo" alt="Grace Within Logo">
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="resources.html">Resources</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
   </nav>
-  
-<header id="home" style="background: linear-gradient(135deg, #cceaff, #e6f7ff); color: #073b5c; padding: 100px 20px; text-align: center;">
-  <div style="display: flex; flex-direction: column; align-items: center;">
-    <h1 style="font-size: 3.5rem; font-weight: 700; margin-bottom: 10px;">Grace Within</h1>
-    <p style="font-size: 1.4rem; margin-bottom: 30px; color: #1e5173;">Empowering individuals to embrace strength, not perfection.</p>
 
-  
-    <a href="events.html" class="btn" style="background-color: #49a9f8; font-size: 1rem; padding: 14px 30px;">Join Our Mission</a>
-  </div>
-</header>
+  <header class="hero">
+    <h1>Grace Within</h1>
+    <p>Empowering individuals to embrace strength, not perfection.</p>
+    <a href="events.html" class="btn">Join Our Mission</a>
+  </header>
 
-  <!--<section id="impact">
-    <h2 style="text-align: center; font-size: 2.5rem; color: #045b8a; margin-bottom: 40px;">Our Impact</h2>
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 1000px; margin: auto;">
-      <div style="flex: 1 1 200px; background-color: #ffffff; border: 1px solid #dbeaf3; border-radius: 10px; padding: 30px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-        <h3 style="font-size: 2rem; color: #001c5c; margin-bottom: 10px;">0</h3>
-        <p style="font-weight: bold; color: #045b8a;">Members</p>
+  <section class="mission-section">
+    <div class="mission-container">
+      <div class="mission-text">
+        <h2>Our Mission</h2>
+        <p><strong>Grace Within</strong> is a nonprofit organization dedicated to fostering resilience, healing, and empowerment through community support. Though rooted in the sports community, our mission welcomes all individuals navigating mental health, self-worth, and body image challenges.</p>
+
+        <p>We create inclusive spaces—both online and in person—where individuals can learn, grow, and connect without pressure to meet unrealistic standards. Through education, resources, and advocacy, we support awareness and recovery for those affected by eating disorders.</p>
+
+        <p>Whether you're an athlete, a student, or someone seeking connection, <strong>Grace Within</strong> is here to uplift your path toward wellness and self-acceptance.</p>
       </div>
-      <div style="flex: 1 1 200px; background-color: #ffffff; border: 1px solid #dbeaf3; border-radius: 10px; padding: 30px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-        <h3 style="font-size: 2rem; color: #223a5e; margin-bottom: 10px;">0</h3>
-        <p style="font-weight: bold; color: #223a5e;">Attended our events</p>
+
+      <div class="mission-image">
+        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/gracewithinhome-DvSlTL7AZSqUCReSkNYNEiiD69Xtcv.jpg" alt="Grace Within Mission">
       </div>
-      <div style="flex: 1 1 200px; background-color: #ffffff; border: 1px solid #dbeaf3; border-radius: 10px; padding: 30px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-        <h3 style="font-size: 2rem; color: #010271; margin-bottom: 10px;">0</h3>
-        <p style="font-weight: bold; color: #045b8a;">Countries</p>
+    </div>
+  </section>
+
+  <section class="events-section">
+    <div class="section-header">
+      <h2>Upcoming Events</h2>
+      <p>Join us for conversations, workshops, and mental health education.</p>
+    </div>
+
+    <div class="events-grid">
+      <div class="event-card">
+        <h3>Mental Health & More Webinar</h3>
+        <p>Learn about mental health and eating disorders, with emphasis on awareness and early support.</p>
+        <div class="event-meta">
+          <span>📅 August 30, 2025</span>
+          <span>🕐 7:00 PM</span>
+        </div>
       </div>
-    
+
+      <div class="event-card">
+        <h3>Grace Within × Sahaas Virtual Session</h3>
+        <p>Open community session focused on reducing stigma and promoting understanding around eating disorders.</p>
+        <div class="event-meta">
+          <span>📅 September 4, 2025</span>
+          <span>🕐 6–7 PM PST</span>
+        </div>
+      </div>
     </div>
-  </section>-->
 
-
-  <div style="
-  max-width: 1500px;
-  margin: 0 auto 30px;
-  padding: 20px 20px;
-  background-color: #ffffff;
-  border-left: 5px solid #045b8a;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-  font-size: 1.4rem;
-  line-height: 1.5;
-  color: #2e3b4e;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  ">
-  <div style="flex: 1 1 60%; padding-right: 20px;">
-    <p><strong>Grace Within</strong> is a nonprofit organization dedicated to fostering resilience, healing, and empowerment through community support. While we are proudly rooted in the sports community, our mission welcomes all individuals navigating the challenges of mental health, self-worth, and body image of those affected by eating disorders.</p>
-<p>We aim to create inclusive spaces (online and in person) where people can connect, learn, and grow without pressure to conform to unrealistic standards. Through educational resources, support networks, and empowering events, we help individuals embrace strength, not perfection. We are especially committed to raising awareness about eating disorders and promoting recovery through compassion, education, and advocacy.</p>
-<p>Whether you're an athlete, a student, or someone simply seeking connection, <strong>Grace Within</strong> is here to support your journey toward self-acceptance and wellness.</p>
-
-  </div>
-  <div style="flex: 1 1 35%; text-align: center;">
-    <img src="gracewithinhome.jpg" alt="Grace Within mission" style="max-width: 75%; height: auto; border-radius: 8px;">
-  </div>
-  </div> 
-
-  <section id="events">
-  <h2 style="text-align: center; font-size: 2.5rem; color: #045b8a; margin-bottom: 30px;">Events</h2>
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 1000px; margin: auto;">
-    <div style="flex: 1 1 300px; background-color: #ffffff; border-radius: 10px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-      <h3 style="color: #045b8a;"> Mental Health & More Webinar</h3>
-      <p>Join to learn more about mental health and eating disorders. Learn about resources and prevention. Date: August 30, 2025 Time: 7:00 PM</p>
+    <div class="view-all-link" style="text-align:center; margin-top:2rem;">
+      <a href="events.html" style="color:#2563eb; font-weight:600;">View All Events →</a>
     </div>
-    <div style="flex: 1 1 300px; background-color: #ffffff; border-radius: 10px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-      <h3 style="color: #045b8a;"> Grace Within x Sahaas Mental Health Virtual Session</h3>
-      <p>Learn about mental health and eating disorders! Spread awareness and stop the stigma. Open to anyone interested. Sign up form can be found on our instagram.
-        Event will take place on September 4, from 6-7 PM PST.
-      </p>
-    </div>
-   
-  </div>
-</section>
+  </section>
 
-
-
-  
-<!--
-  <section id="donate">
-  <div class="content-box" style="text-align: center;">
-    <h2>Support Our Mission</h2>
-    <p>Your donation helps us fund education, outreach, and recovery resources for youth impacted by eating disorders.</p>
-    <a href="#" class="btn" style="background-color: #045b8a; font-size: 1rem; padding: 14px 30px; margin-top: 20px; display: inline-block;">Donate Now</a>
-  </div>
-</section>
-
--->
-
-
-
+  <footer>
+    © 2025 Grace Within. All rights reserved.
+  </footer>
 
 </body>
 </html>
