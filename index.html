@@ -21,7 +21,27 @@
       color: #1e293b;
       line-height: 1.7;
     }
+    .recording-section {
+  max-width: 1000px;
+  margin: 5rem auto;
+  padding: 0 2rem;
+}
 
+.recording-container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.06);
+}
+
+.recording-container video {
+  width: 70%;
+  max-width: 800px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.1);
+}
     /* NAVIGATION */
     nav {
       background-color: #fff;
@@ -266,7 +286,23 @@
       </div>
     </div>
   </section>
-
+  <section class="recording-section">
+    <div class="section-header">
+      <h2>Student Wellness Session</h2>
+      <p>Watch the full session on improving focus, memory, and overall well-being.</p>
+    </div>
+  
+    <div class="recording-container">
+      <iframe
+        src="https://drive.google.com/file/d/1Rd5Y0nanD3qvlgIZnJoQJHMfM78foRor/preview"
+        width="100%"
+        height="500"
+        allow="autoplay"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+  
   <section class="events-section">
     <div class="section-header">
       <h2> Events</h2>
